@@ -7,29 +7,28 @@
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
-    <script src="scripts/angular.min.js"></script>
-    <script src="scripts/app.js"></script>
   </head>
-<body ng-app="LunchCheck">
-   <div class="container"
-   ng-controller="LunchCheckController">
+<body>
+   <div id="app" class="container">
      <h1>Lunch Checker</h1>
 
          <div class="form-group">
              <input id="lunch-menu" type="text"
-             ng-model="menu"
+             v-model="menu"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control">
          </div>
          <div class="form-group">
              <button class="btn btn-default"
-             ng-click="menuCheck()">Check If Too Much</button>
+             @click="menuCheck">Check If Too Much</button>
          </div>
          <div class="form-group message"
-         ng-style="{'color': fontColor}">
-           {{message}}
+         :style="{'color': fontColor}">
+           {{ message }}
          </div>
    </div>
 
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   <script src="scripts/app.js"></script>
 </body>
 </html>
