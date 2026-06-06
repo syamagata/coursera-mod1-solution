@@ -1,8 +1,6 @@
 'use strict';
 
-const { createApp } = Vue;
-
-createApp({
+export default {
   data() {
     return {
       menu: '',
@@ -22,4 +20,4 @@ createApp({
       }
     }
   }
-}).mount('#app');
+};
